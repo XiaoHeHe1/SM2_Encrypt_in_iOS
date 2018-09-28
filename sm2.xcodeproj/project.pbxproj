@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BE30CC4215DC1DA00617E4C /* sm234_tools.exe.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7BE30CC3215DC1DA00617E4C /* sm234_tools.exe.zip */; };
+		7BE30CC7215DC3D400617E4C /* libssl.a.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7BE30CC5215DC3D400617E4C /* libssl.a.zip */; };
+		7BE30CC8215DC3D400617E4C /* libcrypto.a.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7BE30CC6215DC3D400617E4C /* libcrypto.a.zip */; };
+		B051BDD61D33863600D733A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B051BDD51D33863600D733A5 /* main.m */; };
+		B051BDD91D33863600D733A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B051BDD81D33863600D733A5 /* AppDelegate.m */; };
+		B051BDDC1D33863600D733A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B051BDDB1D33863600D733A5 /* ViewController.m */; };
+		B051BDE11D33863600D733A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B051BDE01D33863600D733A5 /* Assets.xcassets */; };
+		B051BEE51D338A6B00D733A5 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B051BEE41D338A6B00D733A5 /* openssl.framework */; };
+		B051BF021D338AC000D733A5 /* ec_param.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEE91D338AC000D733A5 /* ec_param.c */; };
+		B051BF031D338AC000D733A5 /* part1.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEEB1D338AC000D733A5 /* part1.c */; };
+		B051BF041D338AC000D733A5 /* part2.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEED1D338AC000D733A5 /* part2.c */; };
+		B051BF051D338AC000D733A5 /* part3.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEEF1D338AC000D733A5 /* part3.c */; };
+		B051BF061D338AC000D733A5 /* part4.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEF11D338AC000D733A5 /* part4.c */; };
+		B051BF071D338AC000D733A5 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B051BEF31D338AC000D733A5 /* ReadMe.txt */; };
+		B051BF081D338AC000D733A5 /* SM2.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEF41D338AC000D733A5 /* SM2.c */; };
+		B051BF091D338AC000D733A5 /* sm2_ec_key.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEF71D338AC000D733A5 /* sm2_ec_key.c */; };
+		B051BF0A1D338AC000D733A5 /* sm2_test_param.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEF91D338AC000D733A5 /* sm2_test_param.c */; };
+		B051BF0B1D338AC000D733A5 /* SM3.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEFB1D338AC000D733A5 /* SM3.c */; };
+		B051BF0C1D338AC000D733A5 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BEFE1D338AC000D733A5 /* util.c */; };
+		B051BF0D1D338AC000D733A5 /* xy_ecpoint.c in Sources */ = {isa = PBXBuildFile; fileRef = B051BF001D338AC000D733A5 /* xy_ecpoint.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BE30CC3215DC1DA00617E4C /* sm234_tools.exe.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = sm234_tools.exe.zip; sourceTree = "<group>"; };
+		7BE30CC5215DC3D400617E4C /* libssl.a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = libssl.a.zip; path = sm2/libssl.a.zip; sourceTree = "<group>"; };
+		7BE30CC6215DC3D400617E4C /* libcrypto.a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = libcrypto.a.zip; path = sm2/libcrypto.a.zip; sourceTree = "<group>"; };
+		B051BDD11D33863600D733A5 /* sm2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sm2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B051BDD51D33863600D733A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B051BDD71D33863600D733A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B051BDD81D33863600D733A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B051BDDA1D33863600D733A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B051BDDB1D33863600D733A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B051BDE01D33863600D733A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B051BDE51D33863600D733A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B051BEE41D338A6B00D733A5 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		B051BEE91D338AC000D733A5 /* ec_param.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ec_param.c; sourceTree = "<group>"; };
+		B051BEEA1D338AC000D733A5 /* ec_param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ec_param.h; sourceTree = "<group>"; };
+		B051BEEB1D338AC000D733A5 /* part1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = part1.c; sourceTree = "<group>"; };
+		B051BEEC1D338AC000D733A5 /* part1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = part1.h; sourceTree = "<group>"; };
+		B051BEED1D338AC000D733A5 /* part2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = part2.c; sourceTree = "<group>"; };
+		B051BEEE1D338AC000D733A5 /* part2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = part2.h; sourceTree = "<group>"; };
+		B051BEEF1D338AC000D733A5 /* part3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = part3.c; sourceTree = "<group>"; };
+		B051BEF01D338AC000D733A5 /* part3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = part3.h; sourceTree = "<group>"; };
+		B051BEF11D338AC000D733A5 /* part4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = part4.c; sourceTree = "<group>"; };
+		B051BEF21D338AC000D733A5 /* part4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = part4.h; sourceTree = "<group>"; };
+		B051BEF31D338AC000D733A5 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		B051BEF41D338AC000D733A5 /* SM2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SM2.c; sourceTree = "<group>"; };
+		B051BEF51D338AC000D733A5 /* SM2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM2.h; sourceTree = "<group>"; };
+		B051BEF61D338AC000D733A5 /* sm2_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm2_common.h; sourceTree = "<group>"; };
+		B051BEF71D338AC000D733A5 /* sm2_ec_key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm2_ec_key.c; sourceTree = "<group>"; };
+		B051BEF81D338AC000D733A5 /* sm2_ec_key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm2_ec_key.h; sourceTree = "<group>"; };
+		B051BEF91D338AC000D733A5 /* sm2_test_param.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm2_test_param.c; sourceTree = "<group>"; };
+		B051BEFA1D338AC000D733A5 /* sm2_test_param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm2_test_param.h; sourceTree = "<group>"; };
+		B051BEFB1D338AC000D733A5 /* SM3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SM3.c; sourceTree = "<group>"; };
+		B051BEFC1D338AC000D733A5 /* SM3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM3.h; sourceTree = "<group>"; };
+		B051BEFD1D338AC000D733A5 /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
+		B051BEFE1D338AC000D733A5 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		B051BEFF1D338AC000D733A5 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		B051BF001D338AC000D733A5 /* xy_ecpoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xy_ecpoint.c; sourceTree = "<group>"; };
+		B051BF011D338AC000D733A5 /* xy_ecpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xy_ecpoint.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B051BDCE1D33863600D733A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B051BEE51D338A6B00D733A5 /* openssl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B051BDC81D33863600D733A5 = {
+			isa = PBXGroup;
+			children = (
+				7BE30CC3215DC1DA00617E4C /* sm234_tools.exe.zip */,
+				7BE30CC6215DC3D400617E4C /* libcrypto.a.zip */,
+				7BE30CC5215DC3D400617E4C /* libssl.a.zip */,
+				B051BEE71D338AC000D733A5 /* 不可删sm2_sm3_openssl_c副本 */,
+				B051BEE41D338A6B00D733A5 /* openssl.framework */,
+				B051BDD31D33863600D733A5 /* sm2 */,
+				B051BDD21D33863600D733A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B051BDD21D33863600D733A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B051BDD11D33863600D733A5 /* sm2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B051BDD31D33863600D733A5 /* sm2 */ = {
+			isa = PBXGroup;
+			children = (
+				B051BDD71D33863600D733A5 /* AppDelegate.h */,
+				B051BDD81D33863600D733A5 /* AppDelegate.m */,
+				B051BDDB1D33863600D733A5 /* ViewController.m */,
+				B051BDDA1D33863600D733A5 /* ViewController.h */,
+				B051BDE01D33863600D733A5 /* Assets.xcassets */,
+				B051BDE51D33863600D733A5 /* Info.plist */,
+				B051BDD41D33863600D733A5 /* Supporting Files */,
+			);
+			path = sm2;
+			sourceTree = "<group>";
+		};
+		B051BDD41D33863600D733A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B051BDD51D33863600D733A5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B051BEE71D338AC000D733A5 /* 不可删sm2_sm3_openssl_c副本 */ = {
+			isa = PBXGroup;
+			children = (
+				B051BEE81D338AC000D733A5 /* sm2 */,
+			);
+			path = "不可删sm2_sm3_openssl_c副本";
+			sourceTree = "<group>";
+		};
+		B051BEE81D338AC000D733A5 /* sm2 */ = {
+			isa = PBXGroup;
+			children = (
+				B051BEE91D338AC000D733A5 /* ec_param.c */,
+				B051BEEA1D338AC000D733A5 /* ec_param.h */,
+				B051BEEB1D338AC000D733A5 /* part1.c */,
+				B051BEEC1D338AC000D733A5 /* part1.h */,
+				B051BEED1D338AC000D733A5 /* part2.c */,
+				B051BEEE1D338AC000D733A5 /* part2.h */,
+				B051BEEF1D338AC000D733A5 /* part3.c */,
+				B051BEF01D338AC000D733A5 /* part3.h */,
+				B051BEF11D338AC000D733A5 /* part4.c */,
+				B051BEF21D338AC000D733A5 /* part4.h */,
+				B051BEF31D338AC000D733A5 /* ReadMe.txt */,
+				B051BEF41D338AC000D733A5 /* SM2.c */,
+				B051BEF51D338AC000D733A5 /* SM2.h */,
+				B051BEF61D338AC000D733A5 /* sm2_common.h */,
+				B051BEF71D338AC000D733A5 /* sm2_ec_key.c */,
+				B051BEF81D338AC000D733A5 /* sm2_ec_key.h */,
+				B051BEF91D338AC000D733A5 /* sm2_test_param.c */,
+				B051BEFA1D338AC000D733A5 /* sm2_test_param.h */,
+				B051BEFB1D338AC000D733A5 /* SM3.c */,
+				B051BEFC1D338AC000D733A5 /* SM3.h */,
+				B051BEFD1D338AC000D733A5 /* targetver.h */,
+				B051BEFE1D338AC000D733A5 /* util.c */,
+				B051BEFF1D338AC000D733A5 /* util.h */,
+				B051BF001D338AC000D733A5 /* xy_ecpoint.c */,
+				B051BF011D338AC000D733A5 /* xy_ecpoint.h */,
+			);
+			path = sm2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B051BDD01D33863600D733A5 /* sm2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B051BDE81D33863600D733A5 /* Build configuration list for PBXNativeTarget "sm2" */;
+			buildPhases = (
+				B051BDCD1D33863600D733A5 /* Sources */,
+				B051BDCE1D33863600D733A5 /* Frameworks */,
+				B051BDCF1D33863600D733A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sm2;
+			productName = sm2;
+			productReference = B051BDD11D33863600D733A5 /* sm2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B051BDC91D33863600D733A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = yfc;
+				TargetAttributes = {
+					B051BDD01D33863600D733A5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = B051BDCC1D33863600D733A5 /* Build configuration list for PBXProject "sm2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B051BDC81D33863600D733A5;
+			productRefGroup = B051BDD21D33863600D733A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B051BDD01D33863600D733A5 /* sm2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B051BDCF1D33863600D733A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B051BDE11D33863600D733A5 /* Assets.xcassets in Resources */,
+				7BE30CC7215DC3D400617E4C /* libssl.a.zip in Resources */,
+				7BE30CC4215DC1DA00617E4C /* sm234_tools.exe.zip in Resources */,
+				7BE30CC8215DC3D400617E4C /* libcrypto.a.zip in Resources */,
+				B051BF071D338AC000D733A5 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B051BDCD1D33863600D733A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B051BF0C1D338AC000D733A5 /* util.c in Sources */,
+				B051BDDC1D33863600D733A5 /* ViewController.m in Sources */,
+				B051BF051D338AC000D733A5 /* part3.c in Sources */,
+				B051BDD91D33863600D733A5 /* AppDelegate.m in Sources */,
+				B051BF061D338AC000D733A5 /* part4.c in Sources */,
+				B051BDD61D33863600D733A5 /* main.m in Sources */,
+				B051BF0A1D338AC000D733A5 /* sm2_test_param.c in Sources */,
+				B051BF041D338AC000D733A5 /* part2.c in Sources */,
+				B051BF081D338AC000D733A5 /* SM2.c in Sources */,
+				B051BF021D338AC000D733A5 /* ec_param.c in Sources */,
+				B051BF0B1D338AC000D733A5 /* SM3.c in Sources */,
+				B051BF091D338AC000D733A5 /* sm2_ec_key.c in Sources */,
+				B051BF031D338AC000D733A5 /* part1.c in Sources */,
+				B051BF0D1D338AC000D733A5 /* xy_ecpoint.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B051BDE61D33863600D733A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B051BDE71D33863600D733A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B051BDE91D33863600D733A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = sm2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sm2",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yfc.sm2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Debug;
+		};
+		B051BDEA1D33863600D733A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = sm2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sm2",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yfc.sm2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B051BDCC1D33863600D733A5 /* Build configuration list for PBXProject "sm2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B051BDE61D33863600D733A5 /* Debug */,
+				B051BDE71D33863600D733A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B051BDE81D33863600D733A5 /* Build configuration list for PBXNativeTarget "sm2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B051BDE91D33863600D733A5 /* Debug */,
+				B051BDEA1D33863600D733A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B051BDC91D33863600D733A5 /* Project object */;
+}
