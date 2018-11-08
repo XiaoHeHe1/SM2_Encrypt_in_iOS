@@ -43,7 +43,7 @@
 
 typedef struct 
 {
-	BYTE buffer[1024];
+	BYTE buffer[102411];//thissss
 	int position;
 	BYTE hash[HASH_BYTE_LENGTH];
 } sm2_hash;

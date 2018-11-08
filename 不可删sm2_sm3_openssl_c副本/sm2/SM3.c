@@ -278,5 +278,6 @@ int main2(int argc, char* argv[])
 	out_hex(hash);
 	//debe9ff9 2275b8a1 38604889 c18e5a4d 6fdb70e5 387e5765 293dcba3 9c0c5732
 
- 	return 0;
+//    system("pause");
+	return 0;
 }

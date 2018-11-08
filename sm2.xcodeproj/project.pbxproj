@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BBD23792193E13E005DE272 /* sm2官网pdf里面包含4部分每部分有单独目录.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD23782193E13E005DE272 /* sm2官网pdf里面包含4部分每部分有单独目录.pdf */; };
 		7BE30CC4215DC1DA00617E4C /* sm234_tools.exe.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7BE30CC3215DC1DA00617E4C /* sm234_tools.exe.zip */; };
 		7BE30CC7215DC3D400617E4C /* libssl.a.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7BE30CC5215DC3D400617E4C /* libssl.a.zip */; };
 		7BE30CC8215DC3D400617E4C /* libcrypto.a.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7BE30CC6215DC3D400617E4C /* libcrypto.a.zip */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7BBD23782193E13E005DE272 /* sm2官网pdf里面包含4部分每部分有单独目录.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sm2官网pdf里面包含4部分每部分有单独目录.pdf"; sourceTree = "<group>"; };
 		7BE30CC3215DC1DA00617E4C /* sm234_tools.exe.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = sm234_tools.exe.zip; sourceTree = "<group>"; };
 		7BE30CC5215DC3D400617E4C /* libssl.a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = libssl.a.zip; path = sm2/libssl.a.zip; sourceTree = "<group>"; };
 		7BE30CC6215DC3D400617E4C /* libcrypto.a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = libcrypto.a.zip; path = sm2/libcrypto.a.zip; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		B051BDC81D33863600D733A5 = {
 			isa = PBXGroup;
 			children = (
+				7BBD23782193E13E005DE272 /* sm2官网pdf里面包含4部分每部分有单独目录.pdf */,
 				7BE30CC3215DC1DA00617E4C /* sm234_tools.exe.zip */,
 				7BE30CC6215DC3D400617E4C /* libcrypto.a.zip */,
 				7BE30CC5215DC3D400617E4C /* libssl.a.zip */,
@@ -221,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBD23792193E13E005DE272 /* sm2官网pdf里面包含4部分每部分有单独目录.pdf in Resources */,
 				B051BDE11D33863600D733A5 /* Assets.xcassets in Resources */,
 				7BE30CC7215DC3D400617E4C /* libssl.a.zip in Resources */,
 				7BE30CC4215DC1DA00617E4C /* sm234_tools.exe.zip in Resources */,
@@ -355,10 +359,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/sm2",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lstdc++",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = yfc.sm2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -380,10 +381,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/sm2",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lstdc++",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = yfc.sm2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";

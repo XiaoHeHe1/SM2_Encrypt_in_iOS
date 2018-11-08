@@ -56,6 +56,7 @@ int mainSM2(int argc, char* argv[])
 	//test_part3(sm2_param_recommand, TYPE_GFp, 256);
 	//test_part4(sm2_param_recommand, TYPE_GFp, 256);
 
- 	return 0;
+//    system("pause");
+	return 0;
 }
 

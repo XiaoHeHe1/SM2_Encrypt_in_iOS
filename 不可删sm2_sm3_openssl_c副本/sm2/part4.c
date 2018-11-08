@@ -18,9 +18,9 @@ typedef struct
 		BYTE y[MAX_POINT_BYTE_LENGTH];
 	}public_key;
 
-	BYTE C[1024];    // C_1 || C_2 || C_3
+	BYTE C[102411];   //thissss // C_1 || C_2 || C_3
 	BYTE C_1[1024];
-	BYTE C_2[1024];  //º”√‹∫Ûµƒœ˚œ¢
+	BYTE C_2[102411]; //thissss //º”√‹∫Ûµƒœ˚œ¢
 	BYTE C_3[1024];
 
 } message_st;
@@ -61,6 +61,9 @@ int sm2_encrypt(ec_param *ecp, message_st *message_data)
 	BUFFER_APPEND_BIGNUM(message_data->C_1, pos1, ecp->point_byte_length, xy1->y);
 
 	pos1 = 0;
+    
+    //thissssmessage_data->C_2 = malloc(message_data->message_byte_length );//20170317
+    
 	BUFFER_APPEND_BIGNUM(message_data->C_2, pos1, ecp->point_byte_length, xy2->x);
 	BUFFER_APPEND_BIGNUM(message_data->C_2, pos1, ecp->point_byte_length, xy2->y);
 
@@ -73,6 +76,9 @@ int sm2_encrypt(ec_param *ecp, message_st *message_data)
 
 	//º∆À„C_3
 	memset(&local_C_3, 0, sizeof(local_C_3));
+    
+    //thisssslocal_C_3.buffer = malloc(ecp->point_byte_length + message_data->message_byte_length + ecp->point_byte_length);//20170317
+    
 	BUFFER_APPEND_BIGNUM(local_C_3.buffer, local_C_3.position, ecp->point_byte_length
 		, xy2->x);
 	BUFFER_APPEND_STRING(local_C_3.buffer, local_C_3.position, message_data->message_byte_length
@@ -85,6 +91,9 @@ int sm2_encrypt(ec_param *ecp, message_st *message_data)
 	memcpy(message_data->C_3, (char *)local_C_3.hash, HASH_BYTE_LENGTH);
 
 	pos1 = 0;
+    
+    //thissssmessage_data->C = malloc(1 + ecp->point_byte_length + ecp->point_byte_length + message_data->message_byte_length + HASH_BYTE_LENGTH);//20170317
+    
 	BUFFER_APPEND_STRING(message_data->C, pos1, 1 + ecp->point_byte_length + ecp->point_byte_length
 		, message_data->C_1);
 	BUFFER_APPEND_STRING(message_data->C, pos1, message_data->message_byte_length
@@ -93,7 +102,7 @@ int sm2_encrypt(ec_param *ecp, message_st *message_data)
 		, message_data->C_3);
 
 	printf("encrypt: \n");
-	DEFINE_SHOW_STRING(message_data->C, 256);
+	DEFINE_SHOW_STRING(message_data->C, 1 + ecp->point_byte_length + ecp->point_byte_length +message_data->message_byte_length+ HASH_BYTE_LENGTH );
 
 	BN_free(P_x);
 	BN_free(P_y);
@@ -126,6 +135,9 @@ int sm2_decrypt(ec_param *ecp, message_st *message_data)
 		, &message_data->C[pos2]);
 	pos2 = pos2 + pos1;
 	pos1 = 0;
+    
+    //thissssmessage_data->C_2 = malloc(message_data->message_byte_length);//0317
+    
 	BUFFER_APPEND_STRING(message_data->C_2, pos1, message_data->message_byte_length
 		, &message_data->C[pos2]);
 	pos2 = pos2 + pos1;
@@ -239,8 +251,68 @@ void sm2JiaMi(char **sm2_param, int type, int point_bit_length , char *mingwen,c
     ec_param_free(ecp);
 
 }
+void sm2JiemiWithPrivateKey(char **sm2_param, int type, int point_bit_length , char *miwen , char pri[],char output[],int mingWENplainlength ){
+    
+    ec_param *ecp;
+    sm2_ec_key *key_B;
+    message_st message_data;
+    //ecp的开辟空间p a b n
+    ecp = ec_param_new();
+    //ecp 给 pabn设置标准值
+    ec_param_init(ecp, sm2_param, type, point_bit_length);
+    //给dp开辟空间
+    key_B = sm2_ec_key_new(ecp);
+    
+    //设置自己传入的私钥
+    //设置私钥，把中间的值给key_b的b
+    sm2_ec_key_init(key_B, pri, ecp);
+    
+    
+    memset(&message_data, 0, sizeof(message_data));
+    
+    //明文的长度，这个长度应该根据密文计算，这里固定写6
+    message_data.message_byte_length = mingWENplainlength;
+    
+    //k的比特长度是明文长度*8
+    message_data.klen_bit = message_data.message_byte_length * 8;
+    
+    //设置私钥,解密和公钥和随机数无关
+    sm2_bn2bin(key_B->d, message_data.private_key, ecp->point_byte_length);
+    //私钥dB :
+    DEFINE_SHOW_BIGNUM(key_B->d);
+    //给解密后的明文开辟空间
+    message_data.decrypt = (BYTE *)OPENSSL_malloc(message_data.message_byte_length + 1);
+    memset(message_data.decrypt, 0, message_data.message_byte_length+1);//置为0
+    
+    int hehelength = mingWENplainlength +64 +32+1;
+    
+//    message_data.C = malloc(hehelength);//thissss//0317
+    
+    //设置密文
+    for (int i = 0; i < hehelength; i++)
+    {
+        message_data.C[ i] =  miwen[i];
+    }
+    
+//    DEFINE_SHOW_STRING(message_data.C, hehelength);
+    
+    sm2_decrypt(ecp, &message_data);
+    
+    memcpy(output, message_data.decrypt, hehelength);
+    
+    OPENSSL_free(message_data.decrypt);
+    
+    sm2_ec_key_free(key_B);
+    ec_param_free(ecp);
+    
+    
+    
+    
+    
+    
+    
 
-
+}
 void sm2Jiemi(char **sm2_param, int type, int point_bit_length , char *miwen ,char output[] ){
     ec_param *ecp;
     sm2_ec_key *key_B;
@@ -257,6 +329,7 @@ void sm2Jiemi(char **sm2_param, int type, int point_bit_length , char *miwen ,ch
     
     
     memset(&message_data, 0, sizeof(message_data));
+    
     //明文的长度，这个长度应该根据密文计算，这里固定写6
     message_data.message_byte_length = 6;
     //k的比特长度是明文长度*8
@@ -288,7 +361,7 @@ void sm2Jiemi(char **sm2_param, int type, int point_bit_length , char *miwen ,ch
     ec_param_free(ecp);
 }
 //使用传入的公钥加密
-void sm2JiaMiWithPublicKey(char **sm2_param, int type, int point_bit_length , char mingwen[],char *miwen,unsigned char px[],unsigned char py[]){
+void sm2JiaMiWithPublicKey(char **sm2_param, int type, int point_bit_length , char mingwen[],int mingwenlength,char *miwen,unsigned char px[],unsigned char py[]){
     
     ec_param *ecp;
     sm2_ec_key *key_B;
@@ -308,7 +381,7 @@ void sm2JiaMiWithPublicKey(char **sm2_param, int type, int point_bit_length , ch
 //    memcpy(message_data.message, mingwen,strlen(mingwen) );
     
     
-    message_data.message_byte_length = 8;
+    message_data.message_byte_length = mingwenlength;//20170317
     
     
     message_data.klen_bit = message_data.message_byte_length * 8;
@@ -356,9 +429,9 @@ void sm2JiaMiWithPublicKey(char **sm2_param, int type, int point_bit_length , ch
     
     sm2_encrypt(ecp, &message_data);
     
-    printf("%lu",sizeof(message_data.C));
+
     
-    memcpy(miwen, message_data.C, sizeof(message_data.C));
+    memcpy(miwen, message_data.C,message_data.message_byte_length  +64 +32 +2);
 //
     sm2_ec_key_free(key_B);
     ec_param_free(ecp);
